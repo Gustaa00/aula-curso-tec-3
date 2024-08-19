@@ -1,0 +1,170 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+    --destaque-dourado: #F5A623;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--botao-azul);
+}
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    transform: scale(1.05);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__titulo {
+    font-size: 32px;
+    font-weight: 700;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.secundario__imagem {
+    width: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.secundario__imagem:hover {
+    transform: scale(1.05);
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.plano__card {
+    background-color: #1f1f1f;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.plano__card:hover {
+    transform: translateY(-10px);
+}
+
+.plano__titulo {
+    font-size: 24px;
+    color: var(--destaque-dourado);
+    margin-bottom: 0.5em;
+}
+
+.plano__preco {
+    font-size: 20px;
+    color: var(--branco-principal);
+    margin-bottom: 1em;
+}
+
+.plano__beneficios {
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+    padding: 2em 0;
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
